@@ -1,0 +1,135 @@
+.moradores-container {
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    font-size: 18px;
+    color: #8e8e8e;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .search-input {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background: #1b1b2f;
+    color: #fff;
+    outline: none;
+    font-size: 14px;
+    width: 250px;
+  }
+  
+  .table-container {
+    margin-top: 20px;
+    overflow-x: auto;
+  }
+  
+  .moradores-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1b1b2f;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .moradores-table th,
+  .moradores-table td {
+    text-align: left;
+    padding: 15px;
+    color: #fff;
+  }
+  
+  .moradores-table th {
+    background: #161624;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .moradores-table tr:nth-child(even) {
+    background: #222244;
+  }
+  
+  .morador-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .morador-avatar {
+    background: #333;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #8e8e8e;
+  }
+  
+  .morador-nome {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  .morador-email {
+    font-size: 12px;
+    color: #8e8e8e;
+  }
+  
+  .acoes {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .acoes .editar {
+    color: #fff;
+    background: #4caf50;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .acoes .excluir {
+    color: #fff;
+    background: #f44336;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .adicionar-morador {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #1b1b2f;
+    color: #4caf50;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .adicionar-morador:hover {
+    background: #4caf50;
+    color: #fff;
+  }
+  
