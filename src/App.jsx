@@ -9,7 +9,7 @@ import Perfil from "./pages/Perfil";
 import Login from "./pages/Login";
 
 const App = () => {
-  const isAuthenticated = false; // Altere isso para sua lógica real de autenticação.
+  const isAuthenticated = true; // Altere isso para lógica real de autenticação.
 
   return (
     <Router>
@@ -46,3 +46,5 @@ const App = () => {
 };
 
 export default App;
+
+

@@ -1,13 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../style/sidebar.css"; 
+import logo from "../assets/logo.png";
 
 const Sidebar = () => {
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
-        {/* Adicione aqui o PNG da logo */}
-        <h1>OHMNI</h1>
+        
+        <h1><img src={logo}></img></h1>
       </div>
       <nav className="sidebar-navigation">
         <NavLink to="/" className="sidebar-link" activeClassName="sidebar-link-active">

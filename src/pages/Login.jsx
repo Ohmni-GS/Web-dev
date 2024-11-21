@@ -63,12 +63,13 @@ const Login = () => {
               checked={rememberMe}
               onChange={(e) => setRememberMe(e.target.checked)}
             />
-            <label htmlFor="rememberMe">Lembre de mim</label>
+            <label htmlFor="rememberMe">Lembrar de mim</label>
           </div>
           <button type="submit" className="btn-login">
             Entrar
           </button>
         </form>
+        <p>@2024 Marcela T. - Matheus V. - Matheus Q. </p>
       </div>
     </div>
   );
