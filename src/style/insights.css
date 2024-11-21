@@ -1,0 +1,52 @@
+/* src/style/insights.css */
+
+.insights-page {
+    display: flex;
+  }
+  
+  .insights-content {
+    flex: 1;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    padding: 30px;
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .insights-header {
+    margin-bottom: 20px;
+  }
+  
+  .insights-header h1 {
+    font-size: 24px;
+  }
+  
+  .insights-main {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .insights-chart {
+    flex: 2;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .insights-chart h2 {
+    margin-bottom: 5px;
+  }
+  
+  .insights-description {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .like-icon {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  

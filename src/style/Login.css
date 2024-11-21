@@ -1,12 +1,10 @@
 /* Estrutura principal */
 body{
-    width: 100%;
+  margin: 0;
 }
 
 .login-container {
     display: flex;
-    
-    height: 100vh;
     font-family: "Arial", sans-serif;
 }
 
@@ -23,8 +21,7 @@ body{
 
 .login-bg {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Para cobrir todo o espaço da div */
+    height: 100vh;
 }
 
 /* Texto sobre a imagem */
