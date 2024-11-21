@@ -1,34 +1,41 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "../style/sidebar.css"; 
+import { FaHome, FaUsers, FaLightbulb, FaCogs, FaUser, FaSignOutAlt } from "react-icons/fa"; // Ícones
+import "../style/sidebar.css";
 import logo from "../assets/logo.png";
 
 const Sidebar = () => {
   return (
     <div className="sidebar-container">
       <div className="sidebar-header">
-        
-        <h1><img src={logo}></img></h1>
+        <img src={logo} alt="Logo" className="sidebar-logo" />
       </div>
       <nav className="sidebar-navigation">
-        <NavLink to="/" className="sidebar-link" activeClassName="sidebar-link-active">
+        <NavLink to="/" className="sidebar-link">
+          <FaHome className="sidebar-icon" />
           Dashboard
         </NavLink>
-        <NavLink to="/comunidade" className="sidebar-link" activeClassName="sidebar-link-active">
+        <NavLink to="/comunidade" className="sidebar-link">
+          <FaUsers className="sidebar-icon" />
           Comunidade
         </NavLink>
-        <NavLink to="/insights" className="sidebar-link" activeClassName="sidebar-link-active">
+        <NavLink to="/insights" className="sidebar-link">
+          <FaLightbulb className="sidebar-icon" />
           Insights
         </NavLink>
-        <NavLink to="/dispositivos" className="sidebar-link" activeClassName="sidebar-link-active">
+        <NavLink to="/dispositivos" className="sidebar-link">
+          <FaCogs className="sidebar-icon" />
           Dispositivos
-        </NavLink>
-        <NavLink to="/perfil" className="sidebar-link" activeClassName="sidebar-link-active">
-          Seu Perfil
         </NavLink>
       </nav>
       <div className="sidebar-footer">
+        <p className="sidebar-account-title">Sua Conta</p>
+        <NavLink to="/perfil" className="sidebar-link">
+          <FaUser className="sidebar-icon" />
+          Seu Perfil
+        </NavLink>
         <NavLink to="/logout" className="sidebar-link-logout">
+          <FaSignOutAlt className="sidebar-icon" />
           Desconectar-se
         </NavLink>
       </div>

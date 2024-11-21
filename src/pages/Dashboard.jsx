@@ -1,8 +1,14 @@
-import { useNavigate } from "react-router-dom";
+import React from "react";
 
-function Dashboard() {
-    
-    <div className="background"></div>
-}
+const Dashboard = () => {
+  return (
+    <div>
+      <div className="background"></div>
+      <div>
+        <h2>aaaaa</h2>
+      </div>
+    </div>
+  );
+};
 
 export default Dashboard;
