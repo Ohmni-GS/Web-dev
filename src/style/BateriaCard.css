@@ -1,0 +1,49 @@
+.battery-card {
+    background: linear-gradient(135deg, #0e0d39, #1a1f37);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+    
+  }
+  
+  .battery-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .battery-subtitle {
+    font-size: 14px;
+    color: #a0aec0;
+    margin: 5px 0 15px;
+  }
+  
+  .battery-chart {
+    position: relative;
+    height: 120px;
+    width: 120px;
+    margin: auto;
+  }
+  
+  .battery-chart-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .battery-chart-center p {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .battery-chart-center span {
+    font-size: 12px;
+    color: #a0aec0;
+  }
+  
