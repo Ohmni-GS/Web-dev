@@ -1,85 +1,124 @@
 /* Container principal da sidebar */
 .sidebar-container {
-    width: 250px;
-    background: linear-gradient(to bottom, #1a202c, #2d3748); /* Gradiente do fundo */
-    color: white;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: fixed;
-  }
-  
-  .sidebar-header h1 {
-    font-size: 50px;
-  }
+  width: 250px;
+  background: linear-gradient(135deg, rgba(6, 11, 38, 0.94) 0%, rgba(26, 31, 55, 0) 100%);
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+}
 
-  /* Cabeçalho da sidebar (logo) */
-  .sidebar-header {
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    border-bottom: 1px solid #4a5568;
+/* (logo) */
+.sidebar-header {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebar-logo {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Navegação da sidebar */
+.sidebar-navigation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+/* Links da sidebar */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-link .sidebar-icon {
+  margin-right: 10px;
+  background: #1A1F37;
+  color: #0075FF;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Estilo para o link ativo */
+.sidebar-link-active {
+  background: #1A1F37;
+  color: white;
+}
+
+.sidebar-link-active .sidebar-icon {
+  background: #0075FF;
+  color: white;
+}
+
+/* Hover nos links */
+.sidebar-link:hover {
+  background: rgba(26, 31, 55, 0.8);
+}
+
+.sidebar-link:hover .sidebar-icon {
+  background: #0075FF;
+  color: white;
+}
+
+/* Rodapé da sidebar */
+.sidebar-footer {
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-account-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar-link-logout {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #e53e3e;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.sidebar-link-logout .sidebar-icon {
+  margin-right: 10px;
+  background: #1A1F37;
+  color: #e53e3e;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-link-logout:hover {
+  color: #feb2b2;
+}
+
+.sidebar-link-logout:hover .sidebar-icon {
+  background: #e53e3e;
+  color: white;
+}
+
+/* Responsividade para tablets e celulares */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 200px; /* Sidebar mais estreita */
   }
-  
-  /* Navegação da sidebar */
-  .sidebar-navigation {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-  }
-  
-  /* Links da sidebar */
   .sidebar-link {
-    padding: 15px 20px;
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    transition: background 0.3s, color 0.3s;
+    font-size: 16px;
+    padding: 12px 16px;
   }
-  
-  /* Estilo para o link ativo */
-  .sidebar-link-active {
-    background: #4a5568;
-    color: #63b3ed;
+  .sidebar-header {
+    font-size: 20px;
   }
-  
-  /* Hover nos links */
-  .sidebar-link:hover {
-    background: #2c5282;
-    color: #63b3ed;
-  }
-  
-  /* Rodapé da sidebar */
-  .sidebar-footer {
-    padding: 20px;
-    border-top: 1px solid #4a5568;
-  }
-  
-  /* Estilo do botão de logout */
-  .sidebar-link-logout {
-    text-decoration: none;
-    color: #e53e3e;
-    font-size: 18px;
-    transition: color 0.3s;
-  }
-  
-  .sidebar-link-logout:hover {
-    color: #feb2b2;
-  }
-  
-  /* Responsividade para tablets e celulares */
-  @media (max-width: 768px) {
-    .sidebar-container {
-      width: 200px; /* Sidebar mais estreita */
-    }
-    .sidebar-link {
-      font-size: 16px;
-      padding: 12px 16px;
-    }
-    .sidebar-header {
-      font-size: 20px;
-    }
-  }
-  
+}

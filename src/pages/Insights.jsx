@@ -1,7 +1,8 @@
 import React from "react";
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
-import "../style/insights.css"; // Arquivo CSS da página
+import "../style/insights.css"; 
+import "../style/dashboard.css";
 
 const Insights = () => {
   const data = {
@@ -28,6 +29,7 @@ const Insights = () => {
 
   return (
     <div className="insights-page">
+      <div className="background"></div>
       <div className="insights-content">
         <div className="insights-header">
           <h1>Insights</h1>
@@ -40,14 +42,26 @@ const Insights = () => {
           </div>
           <div className="insights-description">
             <p>
-              O monitoramento do seu consumo de energia mostra que você está
-              atingindo um nível de eficiência excelente. ⚡⚡ Isso significa que
-              seus hábitos de uso estão otimizados, resultando em menor
-              desperdício e mais economia. Continue assim e inspire sua
-              comunidade a seguir o mesmo caminho!
+            O monitoramento do seu consumo de energia mostra que você está atingindo um nível de eficiência excelente. 
+            🌱⚡ Isso significa que seus hábitos de uso estão otimizados, resultando em menor desperdício e mais economia.
+             Continue assim e inspire sua comunidade a seguir o mesmo caminho!
             </p>
-            <div className="like-icon">👍</div>
+
+            
           </div>
+
+
+          <div className="insights-description">
+            <p>
+            O monitoramento do seu consumo de energia mostra que você está atingindo um nível de eficiência excelente. 
+            🌱⚡ Isso significa que seus hábitos de uso estão otimizados, resultando em menor desperdício e mais economia.
+             Continue assim e inspire sua comunidade a seguir o mesmo caminho!
+            </p>
+
+            
+          </div>
+
+
         </div>
       </div>
     </div>

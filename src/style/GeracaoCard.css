@@ -1,0 +1,66 @@
+.energy-card {
+    background: linear-gradient(
+      135deg,
+      rgba(6, 11, 38, 0.74) 0%,
+      rgba(26, 31, 55, 0.5) 100%
+    );
+    border-radius: 8px; /* Bordas arredondadas sutis */
+    padding: 20px; /* Aumenta o espaço interno */
+    width: 300px; /* Largura ajustada */
+    color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra mais perceptível */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento maior entre os elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animação ao hover */
+    margin-top: 20px;
+  }
+  
+  .energy-card:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+  }
+  
+  .energy-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #d4d4d8; /* Cor sutil */
+    text-transform: uppercase;
+  }
+  
+  .energy-values {
+    display: flex;
+    justify-content: space-around; /* Alinha os itens com mais espaçamento */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil no topo */
+    padding-top: 10px;
+  }
+  
+  .energy-value-title {
+    font-size: 12px; /* Tamanho levemente maior */
+    color: #a3a3a8;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  .energy-value {
+    font-size: 14px; /* Destaque no tamanho */
+    font-weight: bold;
+    text-align: center;
+    color: #f5f5f7;
+  }
+  
+  .energy-chart {
+    width: 100px; /* Tamanho fixo */
+    height: 100px; /* Tamanho fixo */
+    margin: 0 auto; /* Centraliza o gráfico */
+    border-radius: 50%; /* Suaviza bordas (se necessário) */
+    padding: 5px;
+    display: flex; /* Permite alinhar internamente */
+    justify-content: center;
+    align-items: center;
+  }
+  

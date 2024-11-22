@@ -6,7 +6,6 @@
   
   .insights-content {
     flex: 1;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
     padding: 30px;
     height: 100vh;
@@ -43,6 +42,7 @@
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
+    height: 30vh;
   }
   
   .like-icon {

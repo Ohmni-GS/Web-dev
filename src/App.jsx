@@ -5,11 +5,12 @@ import Dashboard from "./pages/Dashboard";
 import Dispositivos from "./pages/Dispositivos";
 import Insights from "./pages/Insights";
 import Moradores from "./pages/Moradores";
+import MoradorDetalhes from './pages/MoradorDetalhes';
 import Perfil from "./pages/Perfil";
 import Login from "./pages/Login";
 
 const App = () => {
-  const isAuthenticated = true; // Altere isso para sua lógica real de autenticação.
+  const isAuthenticated = true; // Altere isso para lógica real de autenticação.
 
   return (
     <Router>
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/" element={<ProtectedLayout />}>
             <Route index element={<Dashboard />} /> {/* Rota inicial */}
             <Route path="comunidade" element={<Moradores />} />
+            <Route path="/moradores/:id" element={<MoradorDetalhes />} />
             <Route path="insights" element={<Insights />} />
             <Route path="dispositivos" element={<Dispositivos />} />
             <Route path="perfil" element={<Perfil />} />
@@ -36,3 +38,5 @@ const App = () => {
 };
 
 export default App;
+
+

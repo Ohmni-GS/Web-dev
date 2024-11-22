@@ -1,0 +1,29 @@
+.dispositivos-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #001e3c9d;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h2 {
+    font-size: 18px;
+    color: #8e8e8e;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }

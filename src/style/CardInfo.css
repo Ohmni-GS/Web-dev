@@ -1,0 +1,135 @@
+/* Container principal dos cards */
+.dashboard-cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite os cards quebrarem linha em telas menores */
+    justify-content: space-between; /* Espaçamento uniforme */
+    gap: 10px; /* Espaçamento entre os cards */
+    margin: 20px; /* Margem superior e inferior */
+  }
+  
+  /* Card individual */
+  .card-info {
+    background: linear-gradient(
+      135deg,
+      rgba(6, 11, 38, 0.74) 0%,
+      rgba(26, 31, 55, 0.5) 100%
+    );
+    border-radius: 12px;
+    width: 250px; 
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
+    flex-direction: row; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .card-info:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.4); 
+  }
+  
+  /* Conteúdo interno dos cards */
+  .card-info-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1px; 
+  }
+  
+  /* Textos do card */
+  .card-info-text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: calc(100% - 10px); /* Deixa espaço para o ícone */
+    overflow: hidden; /* Evita estouro do texto */
+    white-space: nowrap; /* Evita mais de uma linha horizontal */
+  }
+  
+  .card-info-title {
+    font-size: 12px;
+    color: #a0aec0; /* Cinza claro */
+    text-transform: uppercase;
+    white-space: normal; /* Permite quebra para título */
+    word-wrap: break-word; /* Ajuda na responsividade */
+  }
+  
+  .card-info-value {
+    font-size: 20px; /* Fonte menor */
+    color: white; /* Branco */
+    font-weight: bold;
+  }
+  
+  .card-info-subtitle {
+    font-size: 14px; /* Ajustamos para um tamanho menor */
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap; /* Mantém linha na horizontal */
+    text-overflow: ellipsis; /* Adiciona '...' se ultrapassar espaço */
+  }
+  
+  .card-info-subtitle.positive {
+    color: #63b3ed; 
+  }
+  
+  .card-info-subtitle.negative {
+    color: #e53e3e; 
+  }
+  
+  .card-info-subtitle.stable {
+    color: #a0aec0; 
+  }
+  
+  /* Ícones do card */
+  .card-info-icon {
+    background: #0075ff;
+    color: #f3f3f3;
+    font-size: 28px; /* Reduzimos o tamanho */
+    padding: 8px; /* Padding ajustado */
+    border-radius: 50%;
+    flex-shrink: 0; /* Ícone não diminui de tamanho */
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 768px) {
+    .card-info {
+      width: 100%; /* Cada card ocupa 100% do container */
+      flex-direction: row; /* Mantém alinhamento horizontal */
+    }
+  
+    .card-info-title {
+      font-size: 10px; /* Reduzimos o tamanho da fonte */
+    }
+  
+    .card-info-value {
+      font-size: 18px; /* Texto um pouco menor */
+    }
+  
+    .card-info-icon {
+      font-size: 24px; /* Ícones menores */
+      padding: 6px; /* Padding menor */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-info {
+      flex-direction: column; /* Ícone acima do texto */
+      align-items: flex-start; /* Alinha o texto à esquerda */
+    }
+  
+    .card-info-content {
+      flex-direction: column; /* Reorganiza os elementos */
+    }
+  
+    .card-info-icon {
+      align-self: flex-end; /* Move o ícone para o final */
+    }
+  
+    .card-info-text {
+      max-width: 100%; /* Permite o texto ocupar o container */
+    }
+  }
+  
