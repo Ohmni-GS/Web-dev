@@ -37,4 +37,8 @@
     gap: 20px; /* Espaço entre os cards */
     margin-top: 20px; /* Espaço acima dos cards adicionais */
   }
+
+  .second-cards {
+    margin-top: 20px;
+  }
   

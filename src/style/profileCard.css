@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-between;
     width: 400px; /* Mantendo pequeno para espaço de outros cards */
-    height: 150px; /* Dimensão compacta */
+    height: 300px; /* Dimensão compacta */
     border-radius: 10px;
     background: linear-gradient(135deg, #0E0D39, #1A1F37);
     background-image: url("../assets/placas.png");
@@ -13,6 +13,7 @@
     color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    margin-top: 20px;
   }
 
   .profile-card:hover{

@@ -14,15 +14,17 @@ const Dashboard = () => {
           <p className="breadcrumb">pages/dashboard</p>
           <h1 className="dashboard-title">Dashboard</h1>
         </div>
-        {/*  cards aqui */}
         <DashboardCards />
         <div className="additional-cards">
           <ProfileCard />
-          {/* <EnergyGenerationCard />  */}
-          {/* <BatteryChargeCard />  */}
+          <BatteryChargeCard/>
+          <EnergyGenerationCard />
+        </div>
+        <div className="second-cards">
+        
         </div>
       </div>
-    </div> 
+    </div>
   );
 };
 

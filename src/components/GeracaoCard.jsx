@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Line } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 import "../style/GeracaoCard.css";
 import {
   Chart as ChartJS,
   ArcElement,
   Tooltip,
-  Legend,
-  CategoryScale,
-  LinearScale,
-  LineElement,
 } from "chart.js";
 
 // Registro das dependências do Chart.js
-ChartJS.register(ArcElement, Tooltip, Legend, CategoryScale, LinearScale, LineElement);
+ChartJS.register(ArcElement, Tooltip);
 
 const EnergyGenerationCard = () => {
   // Estados para os dados e carregamento
@@ -26,8 +22,8 @@ const EnergyGenerationCard = () => {
       try {
         const response = await fetch("https://ohmni-api.onrender.com/devices/00C40A24/latest");
         const data = await response.json();
-        setCorrente(data.corrente); // Atualiza a corrente
-        setTensao(data.tensao); // Atualiza a tensão
+        setCorrente(data.corrente);
+        setTensao(data.tensao);
       } catch (error) {
         console.error("Erro ao buscar dados da API:", error);
       } finally {
@@ -38,29 +34,29 @@ const EnergyGenerationCard = () => {
     fetchData();
   }, []);
 
-  // Dados do gráfico
-  const data = {
-    labels: ["Corrente", "Tensão"], // Rótulos
+  // gráfico de Corrente
+  const correnteData = {
+    labels: [""], // ESSA BOSTA N SAI
     datasets: [
       {
-        label: "Medições",
-        data: [corrente, tensao], // Dados provenientes da API
-        backgroundColor: ["#0D9FDF", "#12F298"], // Cores das barras
-        borderWidth: 1,
-        borderRadius: 10,
+        data: [corrente, 10 - corrente], // Corrente e restante
+        backgroundColor: ["#0D9FDF", "#1a1d29"], // Cor para corrente e fundo
+        hoverBackgroundColor: ["#0B7FBD", "#1a1d29"], // Cor ao passar o mouse
+        borderWidth: 0,
       },
     ],
   };
 
-  // Configurações do gráfico
-  const options = {
-    plugins: {
-      legend: { display: false }, // Oculta a legenda
-    },
-    scales: {
-      x: { display: false }, // Oculta o eixo X
-      y: { display: false }, // Oculta o eixo Y
-    },
+  // Dados para o gráfico Doughnut de Tensão
+  const tensaoData = {
+    datasets: [
+      {
+        data: [tensao, 10 - tensao], // Tensão e restante
+        backgroundColor: ["#12F298", "#1a1d29"], // Cor para tensão e fundo
+        hoverBackgroundColor: ["#0FBF88", "#1a1d29"], // Cor ao passar o mouse
+        borderWidth: 0,
+      },
+    ],
   };
 
   return (
@@ -75,14 +71,27 @@ const EnergyGenerationCard = () => {
             <div>
               <p className="energy-value-title">CORRENTE</p>
               <p className="energy-value">{corrente} A (imp)</p>
+              <Doughnut
+                data={correnteData}
+                options={{
+                  plugins: { tooltip: { enabled: false } }, // Sem tooltip
+                  cutout: "80%", // Estilo donut
+                }}
+                className="energy-chart"
+              />
             </div>
             <div>
               <p className="energy-value-title">TENSÃO</p>
               <p className="energy-value">{tensao} V (vmp)</p>
+              <Doughnut
+                data={tensaoData}
+                options={{
+                  plugins: { tooltip: { enabled: false } }, // Sem tooltip
+                  cutout: "80%", // Estilo donut
+                }}
+                className="energy-chart"
+              />
             </div>
-          </div>
-          <div className="energy-chart">
-            <Line data={data} options={options} />
           </div>
         </>
       )}
