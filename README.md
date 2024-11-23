@@ -91,3 +91,6 @@ O projeto consome dados de uma API externa, integrando-os com a interface para e
  
 **Arquivo:** `src/components/ProfileCard.js`  
 **Linha de referência:** *19 - 70* 
+
+---
+## Para fazer Login, basta adicionar um email e senha ficticios.
