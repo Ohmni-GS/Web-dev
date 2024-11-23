@@ -34,12 +34,12 @@ O nome **Ohmni** combina:
 - **Fetch API**: Para comunicação com serviços externos e manipulação de dados.  
 
 ---
-# Fizemos nosso própio back-end
-Mas não implementamos por completos pois faltou tempo para desenvolver mais o nosso site WEB. nossa Api tem toda uma lógica por trás, então não seria possivel utilizar ela sem ter toda a aplicação pronta.
+# Fizemos nosso própio back-end!!
+Mas não implementamos por completo, pois faltou tempo para desenvolver mais o nosso site WEB. nossa Api tem toda uma lógica por trás, então não seria possivel utilizar ela sem ter toda a aplicação pronta.
 Ainda assim no card de GERAÇÃO 'src/components/GeracaoCard.jsx', utilizamos nossa propia api e banco de dados. Isso só foi possivel pois tivemos que fazer uma ligação direta, para a entrega de EDGE.
 Então utilizamos o mock-api nos outros cards, para pelo menos garantir a sua avaliação.
 
-## AQUI ESTÁ O LINK DO banco de dadaos que fizemos: https://ohmni-api.onrender.com/#/
+## AQUI ESTÁ O LINK DO banco de dadas que fizemos: https://ohmni-api.onrender.com/#/
 
 ---
 
@@ -91,3 +91,6 @@ O projeto consome dados de uma API externa, integrando-os com a interface para e
  
 **Arquivo:** `src/components/ProfileCard.js`  
 **Linha de referência:** *19 - 70* 
+
+---
+## Para fazer Login, basta adicionar um email e senha ficticios.
