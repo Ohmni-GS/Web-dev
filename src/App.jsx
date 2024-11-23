@@ -1,5 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import ProtectedLayout from "./layouts/ProtectedLayout";
 import Dashboard from "./pages/Dashboard";
 import Dispositivos from "./pages/Dispositivos";
