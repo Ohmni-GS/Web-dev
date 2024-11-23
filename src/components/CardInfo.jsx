@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../style/CardInfo.css"; // Certifique-se de criar este arquivo
 import { FaBolt, FaHome, FaSolarPanel } from "react-icons/fa"; // Biblioteca de ícones FontAwesome
 
@@ -9,9 +9,6 @@ const CardInfo = ({ title, value, subtitle, icon, variation }) => {
         <div className="card-info-text">
           <p className="card-info-title">{title}</p>
           <h2 className="card-info-value">{value}</h2>
-          {/* <p className={`card-info-subtitle ${variation}`}>
-            {subtitle}
-          </p> */}
         </div>
         <div className="card-info-icon">{icon}</div>
       </div>
@@ -20,25 +17,50 @@ const CardInfo = ({ title, value, subtitle, icon, variation }) => {
 };
 
 const DashboardCards = () => {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://6741208ed0b59228b7f24fc8.mockapi.io/OHMNI/V1/users"
+        );
+        const result = await response.json();
+        if (result.length > 0) {
+          // Considera apenas o primeiro item da resposta
+          setData(result[0]);
+        }
+      } catch (error) {
+        console.error("Erro ao buscar os dados:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (!data) {
+    return <p>Carregando...</p>;
+  }
+
   return (
     <div className="dashboard-cards">
       <CardInfo
         title="Consumo nos últimos 5 dias"
-        value="132 kWh"
+        value={`${data.cosumo} kWh`}
         subtitle="+5%"
         icon={<FaBolt />}
-        variation="positive" // positive ou negative
+        variation="positive"
       />
       <CardInfo
         title="Número de moradores"
-        value="14 casas"
+        value={`${data.houses} casas`}
         subtitle="estável"
         icon={<FaHome />}
         variation="stable"
       />
       <CardInfo
         title="Geração nos últimos 5 dias"
-        value="150 kWh"
+        value={`${data.geracao} kWh`}
         subtitle="-2%"
         icon={<FaSolarPanel />}
         variation="negative"
