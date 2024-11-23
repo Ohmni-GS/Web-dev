@@ -34,7 +34,7 @@ O nome **Ohmni** combina:
 - **Fetch API**: Para comunicação com serviços externos e manipulação de dados.  
 
 ---
-# Fizemos nosso própio BAK-END
+# Fizemos nosso própio back-end
 Mas não implementamos por completos pois faltou tempo para desenvolver mais o nosso site WEB. nossa Api tem toda uma lógica por trás, então não seria possivel utilizar ela sem ter toda a aplicação pronta.
 Ainda assim no card de GERAÇÃO 'src/components/GeracaoCard.jsx', utilizamos nossa propia api e banco de dados. Isso só foi possivel pois tivemos que fazer uma ligação direta, para a entrega de EDGE.
 Então utilizamos o mock-api nos outros cards, para pelo menos garantir a sua avaliação.
